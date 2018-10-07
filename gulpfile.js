@@ -1,21 +1,10 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var header = require('gulp-header');
 var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 var autoprefixer = require('gulp-autoprefixer');
-var pkg = require('./package.json');
 var browserSync = require('browser-sync').create();
-
-// Set the banner content
-var banner = ['/*!\n',
-  ' * Start Bootstrap - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
-  ' * Copyright 2013-' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
-  ' * Licensed under <%= pkg.license %> (https://github.com/BlackrockDigital/<%= pkg.name %>/blob/master/LICENSE)\n',
-  ' */\n',
-  '\n'
-].join('');
 
 // Copy third party libraries from /node_modules into /vendor
 gulp.task('vendor', function() {
@@ -59,9 +48,6 @@ gulp.task('css:compile', function() {
       browsers: ['last 2 versions'],
       cascade: false
     }))
-    .pipe(header(banner, {
-      pkg: pkg
-    }))
     .pipe(gulp.dest('./css'))
 });
 
@@ -92,9 +78,6 @@ gulp.task('js:minify', function() {
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(header(banner, {
-      pkg: pkg
-    }))
     .pipe(gulp.dest('./js'))
     .pipe(browserSync.stream());
 });
@@ -113,6 +96,7 @@ gulp.task('browserSync', function() {
     }
   });
 });
+
 
 // Dev task
 gulp.task('dev', ['css', 'js', 'browserSync'], function() {
