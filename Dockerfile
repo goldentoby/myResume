@@ -1,4 +1,4 @@
-FROM node:6-alpine
+FROM node:10.10.0-alpine
 ADD . myResume
 RUN node -v || exit 1 \ 
     && cd myResume || exit 1 \

@@ -23,18 +23,20 @@
     "jquery": "3.3.1"
   },
   "devDependencies": {
-    "popper.js": "^1.12.9",
     "fs": "0.0.1-security",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "6.0.0",
     "gulp-clean-css": "3.10.0",
     "gulp-header": "2.0.5",
+    "gulp-htmlrender": "^0.3.0",
+    "gulp-live-server": "0.0.31",
     "gulp-livereload": "^4.0.0",
     "gulp-open": "^3.0.1",
     "gulp-rename": "1.4.0",
     "gulp-sass": "4.0.1",
     "gulp-serve": "^1.4.0",
-    "gulp-uglify": "3.0.1"
+    "gulp-uglify": "3.0.1",
+    "popper.js": "^1.12.9"
   },
   "main": "gulpfile.js",
   "scripts": {

@@ -6,7 +6,7 @@ var uglify = require("gulp-uglify");
 var gulp = require("gulp");
 var rename = require("gulp-rename");
 var autoprefixer = require("gulp-autoprefixer");
-var open = require("gulp-open");
+var gls = require("gulp-live-server");
 
 // Copy third party libraries from /node_modules into /vendor
 gulp.task("vendor", function() {
@@ -84,22 +84,14 @@ gulp.task("script", function() {
 
 // Default task
 gulp.task("default", ["style", "script", "vendor"]);
-
-gulp.task("open", function() {
-  return gulp
-    .src("./index.html")
-    .pipe(open())
-    .on("error", handleError);
-});
-
-function handleError(err) {
-  console.log(err.toString());
-  this.emit("end");
-}
+gulp.task('serve', function() {
+    var server = gls.static('./', 3000);
+    server.start();
+  });
 
 // Dev task
-gulp.task("dev", ["style", "script", "open"], function() {
+gulp.task("dev", ["style", "script", "serve"], function() {
   gulp.watch("./scss/*.scss", ["style"]);
   gulp.watch("./js/*.js", ["script"]);
-  gulp.watch("./*.html", ["open"]);
+  gulp.watch("./*.html", ["serve"]);
 });
