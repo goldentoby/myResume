@@ -30,6 +30,7 @@
     "gulp-clean-css": "3.10.0",
     "gulp-header": "2.0.5",
     "gulp-livereload": "^4.0.0",
+    "gulp-open": "^3.0.1",
     "gulp-rename": "1.4.0",
     "gulp-sass": "4.0.1",
     "gulp-serve": "^1.4.0",

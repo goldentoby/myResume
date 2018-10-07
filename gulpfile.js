@@ -4,7 +4,7 @@ var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 var autoprefixer = require('gulp-autoprefixer');
-var browserSync = require('browser-sync').create();
+var open = require("gulp-open");
 
 // Copy third party libraries from /node_modules into /vendor
 gulp.task('vendor', function() {
@@ -61,8 +61,7 @@ gulp.task('css:minify', ['css:compile'], function() {
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(gulp.dest('./css'))
-    .pipe(browserSync.stream());
+    .pipe(gulp.dest('./css'));
 });
 
 // CSS
@@ -78,8 +77,7 @@ gulp.task('js:minify', function() {
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(gulp.dest('./js'))
-    .pipe(browserSync.stream());
+    .pipe(gulp.dest('./js'));
 });
 
 // JS
@@ -88,19 +86,15 @@ gulp.task('js', ['js:minify']);
 // Default task
 gulp.task('default', ['css', 'js', 'vendor']);
 
-// Configure the browserSync task
-gulp.task('browserSync', function() {
-  browserSync.init({
-    server: {
-      baseDir: "./"
-    }
-  });
+gulp.task('open', function () {
+  gulp.src('./index.html')
+    .pipe(open());
 });
 
 
 // Dev task
-gulp.task('dev', ['css', 'js', 'browserSync'], function() {
+gulp.task('dev', ['css', 'js', 'open'], function() {
   gulp.watch('./scss/*.scss', ['css']);
   gulp.watch('./js/*.js', ['js']);
-  gulp.watch('./*.html', browserSync.reload);
+  gulp.watch("./*.html", ['open']);
 });
