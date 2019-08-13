@@ -1,0 +1,115 @@
+\usepackage{etoolbox} % Required for conditional statements
+\usepackage{supertabular} % Required for the supertabular environment which allows tables to span multiple pages so sections with tables correctly wrap across pages
+\setlength\parindent{0pt} % Stop paragraph indentation
+
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT MARGINS
+%----------------------------------------------------------------------------------------
+\usepackage{geometry} % Required for adjusting page dimensions and margins
+\geometry{
+	hmargin=1.5cm, % Horizontal margin
+	vmargin=1.75cm, % Vertical margin
+	a4paper, % Paper size, change to letterpaper for US letter size
+	%showframe, % Uncomment to show how the type block is set on the page -- typically for debugging
+}
+
+
+%----------------------------------------------------------------------------------------
+%	COLUMN LAYOUT
+%----------------------------------------------------------------------------------------
+\usepackage{paracol} % Required for creating multi-column layouts that can span pages automatically
+\columnratio{0.55,0.45} % The relative ratios of the two columns in the CV
+\setlength\columnsep{0.05\textwidth} % Specify the amount of space between the columns
+
+
+%----------------------------------------------------------------------------------------
+%	FONTS
+%----------------------------------------------------------------------------------------
+
+\usepackage{fontspec} % Required for specifying custom fonts under XeLaTeX
+\usepackage[sf,scale=0.95]{libertine} % Load Libertine as a \sffamily font for sans serif titles
+\usepackage{xeCJK} % 使用xeCJK，其他的還有CJK或是xCJK
+
+\XeTeXlinebreaklocale "zh"
+\setmainfont{EBGaramond}[ % Make the default font EBGaramond
+	Path=fonts/, % The font is provided with the template in the fonts folder
+	UprightFont=*-Regular.ttf,
+	BoldFont=*-Bold.ttf,
+	BoldItalicFont=*-BoldItalic.ttf,
+	ItalicFont=*-Italic.ttf,
+	SmallCapsFont=*-SC.ttf
+]
+\setCJKmainfont{BiauKai}
+% Create a new font family for the cursive font Freebooter Script, provided with the template in the fonts folder
+\newfontfamily\cvtextfont[Path=fonts/]{freebooterscript}
+% Create a new font family for FontAwesome icons, provided with the template in the fonts folder
+\newfontfamily{\FA}[Path=fonts/]{FontAwesome} 
+% Load a file to create shortcuts to the icons, see icon examples and their shortcuts in fontawesome.pdf in the fonts folder
+\input{fonts/fontawesomesymbols-xeluatex.tex} 
+
+
+%----------------------------------------------------------------------------------------
+%	COLOURS AND LINKS
+%----------------------------------------------------------------------------------------
+\usepackage[usenames,svgnames]{xcolor} % Allows the definition and use of custom colours
+\definecolor{text}{HTML}{2b2b2b} % Main document font colour, off-black
+\definecolor{headings}{HTML}{701112} % Dark red colour for headings
+\definecolor{shade}{HTML}{F5DD9D} % Peach colour for the contact information box
+\definecolor{linkcolor}{HTML}{641c1d} % 25% desaturated headings colour for links
+% Other colour options: shade=B9D7D9 and linkcolor=A40000; shade=D4D7FE and linkcolor=FF0080
+% For preset colours that can be used by their names without having to define them, see: https://www.latextemplates.com/svgnames-colors
+\color{text} % Set the default text colour for the whole document to the colour defined as 'text' above
+
+
+%------------------------------------------------
+\usepackage{hyperref} % Required for links
+\hypersetup{colorlinks, breaklinks, urlcolor=linkcolor, linkcolor=linkcolor} % Set up links and their colours
+
+
+%----------------------------------------------------------------------------------------
+%	HEADERS & FOOTERS
+%----------------------------------------------------------------------------------------
+\usepackage{fancyhdr} % Required for customising headers and footers
+\pagestyle{fancy} % Enable custom headers and footers
+\fancyhf{} % This suppresses all headers and footers by default, add headers and footers in the template file as per the example
+\renewcommand{\headrulewidth}{0pt} % Remove the default rule under the header
+
+
+%----------------------------------------------------------------------------------------
+%	SECTIONS
+%----------------------------------------------------------------------------------------
+\usepackage[nobottomtitles*]{titlesec} % Required for modifying sections, the nobottomtitles* is required for pushing section titles to the next page when they are close to the bottom of the page
+\renewcommand{\bottomtitlespace}{0.1\textheight} % Modify the minimal space required from the bottom margin not to move the title to the next page
+\titleformat{\section}{\color{headings}\scshape\LARGE\raggedright}{}{0em}{}[\color{black}\titlerule] % Define the \section format
+\titlespacing{\section}{0pt}{4pt}{12pt} % Spacing around section titles, the order is: left, before and after
+
+
+%----------------------------------------------------------------------------------------
+%	CUSTOM COMMANDS
+%----------------------------------------------------------------------------------------
+% Command for entering a new work position
+\newcommand{\workposition}[5]{
+	\expandafter\ifstrequal\expandafter{#3}{}{}{{\raggedright #3}}  % Institution Name
+	{\raggedleft\textsc{#1\expandafter\ifstrequal\expandafter{#2}{}{}{\hspace{6pt}\footnotesize{(#2)}}}\par}  % Date and type
+	\expandafter\ifstrequal\expandafter{#4}{}{}{{\raggedright\textit{\textbf{#4}}}\\[3pt]} % Title
+	\expandafter\ifstrequal\expandafter{#5}{}{}{#5\\[5pt]} % Description
+}
+
+% Command for entering a long-form description where there is a title on one line and a paragraph description below it
+\newcommand{\longformdescription}[2]{
+	\textbf{#1}\\[8pt]
+	#2\medskip
+}
+
+\newcommand{\longformdescriptionwithremind}[3]{
+	\textbf{#1}\\[4pt]
+	#2\\[4pt]
+	#3
+	\medskip
+}
+
+% Command for entering a separate table row -- used as a generic visual element for any section that uses a two column table
+\newcommand{\tableentry}[3]{
+	\textsc{#1} & #2\expandafter\ifstrequal\expandafter{#3}{}{\\}{\\[6pt]} % First the heading, then content, then a conditional insertion of whitespace if the third parameter has any content in it
+}

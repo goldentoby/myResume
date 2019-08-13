@@ -1,0 +1,264 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% YuCheng Liao Curriculum Vitae
+% Version 1.0 (06/07/2019)
+%
+% Authors:
+% Ref. (toby.liao@ycliao.io)
+% YuCheng Liao
+%
+% 
+% !TEX program = xelatex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+\documentclass[10pt]{article} % Font size, can be: 10pt, 11pt or 12pt
+
+\input{structure.tex} % Include the file that specifies the document structure
+% Headers and footers can be added with the \lhead{} \rhead{} \lfoot{} \rfoot{} commands
+% Example right footer:
+%\rfoot{\color{headings}{\sffamily Last update: \today. Typeset with Xe\LaTeX}}
+
+%----------------------------------------------------------------------------------------
+\begin{document}	
+\begin{paracol}{2} % Begin the multi-column environment
+
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CURRICULUM VITAE TEXT
+%----------------------------------------------------------------------------------------
+
+\parbox[top][0.12\textheight][c]{\linewidth}{ 
+% Parbox to hold the author name and CV text; fixed height to match the coloured box to the right, centred vertically and full line width
+	\vspace{-0.04\textheight} % Reduce whitespace above the parbox to separate it from the main content
+	\centering % Centre text
+	{\sffamily\Huge 廖昱程 (Toby)}\\\medskip % Your name
+	{\Huge\color{headings} 個人履歷}
+}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{求職目標}  % Job vacancy and personal characteristic
+{\raggedright\textbf{``對於軟體工程有強烈興趣，特別是網頁開發、網路架構、機器學習、雲端架構等，希望能再寒假實習期間增進相關技能並為公司達成效益。"}\\\medskip}
+
+\section{學歷證明}
+\begin{flushleft}  % align on the left
+%------------------------------------------------
+% Blank \workposition command to add another job:
+%\workposition
+%{} % Date
+%{} % FT/PT (full time or part time)
+%{} % Institution Name
+%{} % Title
+%{} % Description
+% All 5 parameters must be supplied but any can be empty if you don't need them
+%------------------------------------------------
+
+	\workposition
+		{2019/20}
+		{全職}
+		{香港科技大學\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ } 
+		{碩士學位 - 電信工程}
+		{獲得入學獎學金 (20000 \$HKD)}
+	
+	\vspace{.25cm}
+	\workposition
+		{2014/18}
+		{全職}
+		{臺灣科技大學\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ } 
+		{學士學位 - 電機工程學系}
+		{2018年畢業生致詞}
+	
+\end{flushleft}
+\medskip % Extra whitespace before the next section
+
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+\section{工作證明}
+
+%------------------------------------------------
+% Blank \workposition command to add another job:
+%\workposition
+%{} % Date
+%{} % FT/PT (full time or part time)
+%{} % Institution Name
+%{} % Title
+%{} % Description
+% All 5 parameters must be supplied but any can be empty if you don't need them
+%------------------------------------------------
+\workposition
+	{Aug 2018 - Dec 2018}
+	{全職}
+	{盾心科技股份有限公司 \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+	{軟體架構工程師}
+	{
+		獨立撰寫機構內部全端工具 \\
+		前端工程: ReactJS(MaterialUI, Bootstrap) \\
+		後端工程: Python-Flask(Restful API) \\
+		自動化部署工具(Docker, Jenkins, Kubernetes) \\
+		Elastic Search(Kibana[Query, Visualize])\\
+		亞馬遜雲端工具(EKS, Load balance, Basic Functionality) } % Description
+
+\workposition
+	{Nov 2017 - Jun 2018}
+	{實習}
+	{盾心科技股份有限公司 \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+	{軟體品質實習生}
+	{
+		資料庫檢索取編程(MySQL, MongoDB, SQLite) \\
+		編寫客戶端虛擬伺服器(利用 python) \\
+		網路架構(TCP/IP, UDP, wireshark) \\
+		Python 編程技巧(Pymongo, Paramiko, httpserver) \\
+		Github 版本控制(該團隊repo主要貢獻者)}  % Description
+
+%------------------------------------------------
+% Blank \longformdescription command to add another job:
+%\longformdescription
+%{} % Subtitle
+%{} % Description
+%------------------------------------------------
+\longformdescription
+{我與同儕不同之特質與事蹟?}
+{
+	\textit{負責客戶端API端口測試} \\
+	• 因該項目之穩定發展，讓公司獲利成長200\% \\
+	\textit{負責公司安卓介面之測試與品管} \\
+	• 比起同期iOS品項測試提升效率50\% \\
+	\textit{開發網路介面偵測小工具給內部工程師} \\
+	• 公司內部工程師平均節省每天固定工作的10\%時間\\
+	\textit{獨立開發機構內部全端工具} \\
+	• 公司內部工程師平均節省每天固定工作的30\%時間
+}
+
+\vspace{-\baselineskip}\bigskip\bigskip\bigskip\bigskip % Standardise the whitespace after this section and before the next (the custom command adds too much otherwise)
+
+
+%----------------------------------------------------------------------------------------
+\switchcolumn % Switch to the next paracol column
+
+
+%----------------------------------------------------------------------------------------
+%	COLOURED CONTACT DETAILS BOX
+%----------------------------------------------------------------------------------------
+\parbox[top][0.12\textheight][c]{\linewidth}{ % Parbox to hold the colour box; fixed height to match the name/CV text to the left, centred vertically and full line width
+	\vspace{-0.04\textheight} % Reduce whitespace above the parbox to separate it from the main content
+	\colorbox{shade}{ % Create the coloured box
+		\begin{supertabular}{p{0.05\linewidth}|p{0.775\linewidth}} % Start a table with two columns, the table will ensure everything is aligned
+			\raisebox{-1pt}{\faPhone} & +886 972-182-782 \\ % Phone number
+			\raisebox{0pt}{\small\faEnvelope} & \href{mailto:toby.liao@ycliao.io}{toby.liao@ycliao.io} \\ % Email address
+			\raisebox{-1pt}{\small\faDesktop} & \href{https://resume.ycliao.io/}{https://resume.ycliao.io/} \\ % Website
+			%\raisebox{-1pt}{\faGithub} & \href{https://github.com/username}{https://github.com/username} \\ % GitHub profile
+			\raisebox{-1pt}{\faLinkedinSquare} & \href{https://linkedin.com/in/yu-cheng-liao/}{https://linkedin.com/in/yu-cheng-liao/} \\ % LinkedIn profile
+			% See fontawesome.pdf in the fonts folder for all icons you can use
+		\end{supertabular}
+	}
+}
+
+
+%----------------------------------------------------------------------------------------
+%	PROJECT
+%----------------------------------------------------------------------------------------
+
+\section{實務專題} 
+
+%------------------------------------------------
+% Blank \longformdescriptionwithremind command to add another job:
+%\longformdescriptionwithremind
+%{} % Subtitle
+%{} % Description
+%{} % Remind
+%------------------------------------------------
+\longformdescriptionwithremind
+{資料視象化於網頁與本地端應用程式}
+{• 這是一個全端工程並結合自動化佈署，部署於公司內網}
+{關鍵技術: ReactJS, Python, Jenkins, Docker, Kubernetes}
+
+\longformdescriptionwithremind 
+{利用深層網路分析(DNN)偵測相關足底疾病}
+{• 此專題基於python，並提供使用者介面以利醫生與物理治療師藉由圖表判斷足底病情。除此之外，更方便於研究人員獲取資料以進一步分析。}
+{關鍵技術: Python(matplotlib), Delsis, Emg Sensor}
+\vspace{.25cm}
+
+\longformdescriptionwithremind {十字韌帶復健與遊戲功能}
+{• 此專題幫助十字韌帶受傷之病患儘早恢復。在此一專案，主要負責技術相關進度控管並為此一專題主要演講人(英文)}
+{關鍵技術: Arduino(C++), 專案管理, 英文簡報}
+
+
+%----------------------------------------------------------------------------------------
+%	AWARDS
+%----------------------------------------------------------------------------------------
+
+\section{獎項殊榮}
+\begin{supertabular}{rl} % Start a table with two columns, the table will ensure everything is aligned
+	
+	%------------------------------------------------
+	% Blank \longformdescriptionwithremind command to add another job:
+	%\longformdescriptionwithremind
+	%{} % Heading
+	%{} % Content
+	%{} % Tailing whitespace
+	%------------------------------------------------
+	\tableentry{Jul 2018}{\textbf{微軟創意潛能杯(大中華區)}}{}
+	\tableentry{}{\textit{代表台灣地區前往美國總部決賽}}{spaceafter}
+	
+	\tableentry{Mar 2018}{\textbf{大學本科-校園傑出青年}}{}
+	\tableentry{}{\textit{從12,000為學生之中選出11位}}{spaceafter}
+	
+	\tableentry{Jul 2015}{\textbf{最佳演講報告者}}{}
+	\tableentry{}{\textit{國際泰國研學術研討會}}{spaceafter}
+	
+	%------------------------------------------------
+	
+\end{supertabular}
+
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS
+%----------------------------------------------------------------------------------------
+\section{電腦技能} 
+\begin{supertabular}{rl} % Start a table with two columns, the table will ensure everything is aligned
+	
+	%------------------------------------------------
+	% Blank \longformdescriptionwithremind command to add another job:
+	%\longformdescriptionwithremind
+	%{} % Heading
+	%{} % Content
+	%{} % Tailing whitespace
+	%------------------------------------------------
+	\tableentry{中等程度}{Javascript, HTML, CSS,}{}
+	\tableentry{}{Linux Cmd, SQL programming}{}
+	\tableentry{}{Kubernetes, Elastic Search, \LaTeX}{spaceafter}
+	
+	\tableentry{專業程度}{Python, Unix, Docker, Jenkins}{spaceafter}
+	
+\end{supertabular}
+
+
+%----------------------------------------------------------------------------------------
+%	REFERENCES
+%----------------------------------------------------------------------------------------
+
+\section{主管聯繫}
+\begin{supertabular}{rl} % Start a table with two columns, the table will ensure everything is aligned
+	
+	%------------------------------------------------
+	% Blank \longformdescriptionwithremind command to add another job:
+	%\longformdescriptionwithremind
+	%{} % Heading
+	%{} % Content
+	%{} % Tailing whitespace
+	%------------------------------------------------
+	\tableentry{}{\textbf{Mr. Henry Soang}}{spaceafter}
+	\tableentry{職位}{QAE 團隊主管}{}
+	\tableentry{公司名稱}{\href{https://umbocv.ai/}{Umbo Computer Vision™ }}{}
+	\tableentry{國際電話}{+1 (888) 449-1321 (Work)}{}
+	\tableentry{國內電話}{+886-2-8751-2501}{}
+	
+\end{supertabular}
+
+\end{paracol}
+\end{document}

@@ -1,0 +1,270 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% YuCheng Liao Curriculum Vitae
+% According to XeLaTeX Template
+% Version 1.0 (06/07/2019)
+%
+% Authors:
+% Ref. (toby.liao@ycliao.io)
+% YuCheng Liao
+%
+% !TEX program = xelatex
+% XeLaTeX as the engine in your editor or script
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt]{article} % Font size, can be: 10pt, 11pt or 12pt
+\input{structure.tex} % Include the file that specifies the document structure
+
+% Headers and footers can be added with the \lhead{} \rhead{} \lfoot{} \rfoot{} commands
+% Example right footer:
+%\rfoot{\color{headings}{\sffamily Last update: \today. Typeset with Xe\LaTeX}}
+
+%----------------------------------------------------------------------------------------
+\begin{document}
+\begin{paracol}{2} % Begin the multi-column environment
+
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CURRICULUM VITAE TEXT
+%----------------------------------------------------------------------------------------
+\parbox[top][0.12\textheight][c]{\linewidth}{ 
+% Parbox to hold the author name and CV text; fixed height to match the coloured box to the right, centred vertically and full line width
+	\vspace{-0.04\textheight} % Reduce whitespace above the parbox to separate it from the main content
+	\centering % Centre text
+	{\sffamily\Huge Yu-Cheng Liao (Toby)}\\\medskip % Your name
+	{\Huge\color{headings} Curriculum Vitae}
+}
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Objective}  % Job vacancy and personal characteristic
+{\raggedright{``With a great interest in \textbf{Software Engineering}, especially \textbf{Website Programming, SQL Programming, Networking Topology} and \textbf{CI/CD}, hope to dedicate to these field and make a contribution to the company. I am fast learner and love to team with colleague."}\\\medskip}
+
+\section{Education}
+\begin{flushleft}  % align on the left
+%------------------------------------------------
+% Blank \workposition command to add another job:
+%\workposition
+%{} % Date
+%{} % FT/PT (full time or part time)
+%{} % Institution Name
+%{} % Title
+%{} % Description
+% All 5 parameters must be supplied but any can be empty if you don't need them
+%------------------------------------------------
+
+	\workposition
+		{2019/20}
+		{FT}
+		{Hong Kong University of Science and Technology \ \ \ \ \ \ \ \ \ \ \ \ \  } 
+		{Master of Science - Telecommunication}
+		{Received the Entrance Scholarship (20000 \$HKD)}
+	
+	\workposition
+		{2014/18}
+		{FT}
+		{National Taiwan University of Science and Technology  \ \ \ \ } 
+		{Bachelor of Science - Electrical Engineering}
+		{Valedictorian of graduation ceremony in my university\\
+		  NTUST Outstanding Youth Awards ( 11/12000 ppl )}
+	
+\end{flushleft}
+\medskip % Extra whitespace before the next section
+
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+\section{Work Experience}
+
+%------------------------------------------------
+% Blank \workposition command to add another job:
+%\workposition
+%{} % Date
+%{} % FT/PT (full time or part time)
+%{} % Institution Name
+%{} % Title
+%{} % Description
+% All 5 parameters must be supplied but any can be empty if you don't need them
+%------------------------------------------------
+\workposition
+	{Aug 2018 - Dec 2018}
+	{FT}
+	{Umbo Computer Vision™ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+	{Infrastructure Operating Engineer}
+	{
+		Independently build up an internal FAE tool (full-stack) \\
+		Frontend: ReactJS (Material UI, Bootstrap) \\
+		Backend: Python-Flask (Restful API) \\
+		CI/CD Process (Docker, Jenkins, Kubernetes) \\
+		Elastic Search (Kibana[Query, Visualize])\\
+		Amazon Web Service (EKS, Load balance, Basic Functionality) \\
+		\textbf{Key abilities Cultivation:}\\
+		Independently handle a project and lead the teammate to finish works.} % Description
+
+\workposition
+	{Nov 2017 - Jun 2018}
+	{PT}
+	{Umbo Computer Vision™ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+	{Software Quality Assurance Intern}
+	{
+		Databases Query (SQLite, MongoDB) \\
+		Mock Server for production usage (Python) \\
+		Networking Structure (TCP/IP, UDP, wireshark) \\
+		Python Programming (Pymongo, Paramiko, httpserver) \\
+		Github version control (QA team repo contributor) \\
+		\textbf{Key abilities Cultivation:}\\ 
+		Focus on Python Programming and mentor the new coming intern.}  % Description
+		
+
+%------------------------------------------------
+% Blank \longformdescription command to add another job:
+%\longformdescription
+%{} % Subtitle
+%{} % Description
+%------------------------------------------------
+\longformdescription
+{What makes me different from peers?}
+{
+	\textit{Responsible for Product API Testing - QA Intern} \\
+	Achieved a remarkable 120\% growth rate in revenue \\
+	\textit{Responsible for Android Mobile Testing: - QA Intern} \\
+	Improved Efficiency of work 30\% than iOS project \\
+	\textit{Developed network scanning tool for Developers - QA Intern} \\
+	Reduce the daily routine time cost of 10\% for Dev team. \\
+	\textit{Develope testing tool for FAE team(full-stack): - infra Eng} \\
+	Reduce the daily routine time cost of 30\% for FAE team.
+}
+
+\vspace{-\baselineskip}\bigskip\bigskip\bigskip\bigskip % Standardise the whitespace after this section and before the next (the custom command adds too much otherwise)
+
+
+%----------------------------------------------------------------------------------------
+\switchcolumn % Switch to the next paracol column
+
+
+%----------------------------------------------------------------------------------------
+%	COLOURED CONTACT DETAILS BOX
+%----------------------------------------------------------------------------------------
+\parbox[top][0.12\textheight][c]{\linewidth}{ % Parbox to hold the colour box; fixed height to match the name/CV text to the left, centred vertically and full line width
+	\vspace{-0.04\textheight} % Reduce whitespace above the parbox to separate it from the main content
+	\colorbox{shade}{ % Create the coloured box
+		\begin{supertabular}{p{0.05\linewidth}|p{0.775\linewidth}} % Start a table with two columns, the table will ensure everything is aligned
+			\raisebox{-1pt}{\faPhone} & +886 972-182-782 \\ % Phone number
+			\raisebox{0pt}{\small\faEnvelope} & \href{mailto:toby.liao@ycliao.io}{toby.liao@ycliao.io} \\ % Email address
+			\raisebox{-1pt}{\small\faDesktop} & \href{https://resume.ycliao.io/}{https://resume.ycliao.io/} \\ % Website
+			%\raisebox{-1pt}{\faGithub} & \href{https://github.com/username}{https://github.com/username} \\ % GitHub profile
+			\raisebox{-1pt}{\faLinkedinSquare} & \href{https://linkedin.com/in/yu-cheng-liao/}{https://linkedin.com/in/yu-cheng-liao/} \\ % LinkedIn profile
+			% See fontawesome.pdf in the fonts folder for all icons you can use
+		\end{supertabular}
+	}
+}
+
+
+%----------------------------------------------------------------------------------------
+%	PROJECT
+%----------------------------------------------------------------------------------------
+
+\section{Practical Project} 
+
+%------------------------------------------------
+% Blank \longformdescriptionwithremind command to add another job:
+%\longformdescriptionwithremind
+%{} % Subtitle
+%{} % Description
+%{} % Remind
+%------------------------------------------------
+\longformdescriptionwithremind
+{Query and visualize the data on web through database}
+{It's a full-stack project with CI/CD implementation, deployed in company's domain on AWS.}
+{\textbf{Key Technology:} \\ReactJS, Python-flask, Jenkins, Docker, Kubernetes.}
+
+\longformdescriptionwithremind {Diagnosing Insole Diseases with DNN}
+{It's a python-base project, with a primitive user interface which help the docter P.T. to detect the insole discomfort. Moreover, the researchers can retrieve the record and plot.}
+{\textbf{Key Technology:} \\ Python(matplotlib), Delsis, Emg Sensor.}
+
+\longformdescriptionwithremind {ACL rehabilitation with Gamming feature}
+{Target audience are patients with the Anterior Cruciate Ligament injury and under rehab process. In this project, I am the person to lead the tech part, and deliver the pitch. We attended the Imagine Cups hold by the Microsoft.}
+{\textbf{Key Technology:} \\ Arduino(C++), Project Management, English Presentation.}
+
+
+%----------------------------------------------------------------------------------------
+%	AWARDS
+%----------------------------------------------------------------------------------------
+
+\section{Awards}
+\begin{supertabular}{rl} % Start a table with two columns, the table will ensure everything is aligned
+	
+	%------------------------------------------------
+	% Blank \longformdescriptionwithremind command to add another job:
+	%\longformdescriptionwithremind
+	%{} % Heading
+	%{} % Content
+	%{} % Tailing whitespace
+	%------------------------------------------------
+	\tableentry{Jul 2018}{\textbf{Microsoft Imagine Cups World Final}}{}
+	\tableentry{}{\textit{Representing Taiwan to attend Final in Seattle}}{spaceafter}
+	
+	\tableentry{Mar 2018}{\textbf{NTUST Outstanding Youth Award}}{}
+	\tableentry{}{\textit{Selected as 11 out of 12,000 students}}{spaceafter}
+	
+	\tableentry{Jul 2015}{\textbf{Best Presentor of the Day}}{}
+	\tableentry{}{\textit{International Conference in Bangkok}}{spaceafter}
+	
+	%------------------------------------------------
+	
+\end{supertabular}
+
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS
+%----------------------------------------------------------------------------------------
+\section{Computer Skills} 
+\begin{supertabular}{rl} % Start a table with two columns, the table will ensure everything is aligned
+	
+	%------------------------------------------------
+	% Blank \longformdescriptionwithremind command to add another job:
+	%\longformdescriptionwithremind
+	%{} % Heading
+	%{} % Content
+	%{} % Tailing whitespace
+	%------------------------------------------------
+	\tableentry{Intermediate}{Javascript, HTML, CSS,}{}
+	\tableentry{}{MacOS, Linux System, Clang, Golang}{}
+	\tableentry{}{Kubernetes, Elastic Search, \LaTeX}{spaceafter}
+	
+	\tableentry{Expert}{Python, Unix, Docker, Jenkins}{spaceafter}
+	
+\end{supertabular}
+
+
+%----------------------------------------------------------------------------------------
+%	REFERENCES
+%----------------------------------------------------------------------------------------
+
+\section{References}
+\begin{supertabular}{rl} % Start a table with two columns, the table will ensure everything is aligned
+	
+	%------------------------------------------------
+	% Blank \longformdescriptionwithremind command to add another job:
+	%\longformdescriptionwithremind
+	%{} % Heading
+	%{} % Content
+	%{} % Tailing whitespace
+	%------------------------------------------------
+	\tableentry{}{\textbf{Mr. Henry Soang}}{spaceafter}
+	\tableentry{Position}{QAE team leader}{}
+	\tableentry{Employer}{\href{https://umbocv.ai/}{Umbo Computer Vision™ }}{}
+	\tableentry{Phone}{+1 (888) 449-1321 (Work)}{}
+	\tableentry{Phone}{+886-2-8751-2501}{}
+	
+\end{supertabular}
+
+\end{paracol}
+\end{document}
